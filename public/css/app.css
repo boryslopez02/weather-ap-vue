@@ -1,0 +1,226 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.theme {
+  min-height: 100vh;
+  background: #fdc830;
+  background: linear-gradient(180deg, #fdc830, #ff8706);
+  overflow: hidden;
+}
+.theme h1, .theme h3, .theme p, .theme span {
+  color: white;
+}
+.theme .d-flex {
+  display: flex;
+}
+.theme .mainInfoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.theme .mainInfoContainer .dayInfo {
+  padding: 50px 30px;
+  width: 70%;
+}
+.theme .mainInfoContainer .dayInfo .location h1 {
+  font-size: 25px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+.theme .mainInfoContainer .dayInfo .location .indicators {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+}
+.theme .mainInfoContainer .dayInfo .location .indicators span {
+  width: 8px;
+  height: 8px;
+  margin-right: 10px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.6;
+  cursor: pointer;
+  transition: 0.3s ease all;
+}
+.theme .mainInfoContainer .dayInfo .location .indicators .active {
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+}
+.theme .mainInfoContainer .dayInfo .temperature {
+  margin-top: 40px;
+}
+.theme .mainInfoContainer .dayInfo .temperature h1 {
+  font-size: 100px;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 700;
+}
+.theme .mainInfoContainer .dayInfo .temperature .d-flex .box {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+}
+.theme .mainInfoContainer .dayInfo .temperature .d-flex .box span {
+  margin-left: 10px;
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+}
+.theme .mainInfoContainer .dayInfo .details {
+  margin-top: 40px;
+}
+.theme .mainInfoContainer .dayInfo .details h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.theme .mainInfoContainer .dayInfo .details p {
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  opacity: 0.7;
+}
+.theme .mainInfoContainer .shadowIcon {
+  position: relative;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  padding: 30px;
+  animation: showIcon 0.5s 0.5s both;
+}
+.theme .mainInfoContainer .animationDay {
+  top: 50%;
+  right: -150px;
+  transform: translate(0, -50%) scale(0.8);
+  animation: rotateIcon 5s 1s cubic-bezier(1, 1, 1, 1) alternate infinite;
+}
+.theme .stadistics .dataContainer {
+  padding: 30px;
+  border-top: 2px solid rgba(255, 255, 255, 0.4);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+}
+.theme .stadistics .dataContainer .timeData {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.theme .stadistics .dataContainer .timeData .item {
+  text-align: center;
+}
+.theme .stadistics .dataContainer .timeData .item span {
+  display: block;
+  font-size: 15px;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 15px;
+  opacity: 0.7;
+}
+.theme .stadistics .dataContainer .timeData .item h3 {
+  font-size: 22px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+.theme .stadistics .listDays {
+  padding: 30px 30px 60px;
+}
+.theme .stadistics .listDays .dayItem {
+  display: flex;
+  align-items: center;
+}
+.theme .stadistics .listDays .dayItem .listItem {
+  display: inline-block;
+  width: 33.3333333333%;
+  margin: 15px 0;
+}
+.theme .stadistics .listDays .dayItem .listItem p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 17px;
+  font-weight: 500;
+}
+.theme .stadistics .listDays .dayItem .listItem:nth-child(2) {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.theme .stadistics .listDays .dayItem .listItem:nth-child(2) .icon {
+  opacity: 0.7;
+}
+.theme .stadistics .listDays .dayItem .listItem:nth-child(2) .percentage {
+  width: 60px;
+}
+.theme .stadistics .listDays .dayItem .listItem:nth-child(2) .percentage p {
+  opacity: 0.7;
+}
+.theme .stadistics .listDays .dayItem .listItem:nth-child(3) {
+  text-align: end;
+}
+.theme .stadistics .listDays .dayItem .listItem:nth-child(3) .changes {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.theme .stadistics .listDays .dayItem .listItem:nth-child(3) .changes p, .theme .stadistics .listDays .dayItem .listItem:nth-child(3) .changes span {
+  font-family: "Montserrat", sans-serif;
+  font-size: 17px;
+  font-weight: 500;
+}
+.theme .stadistics .listDays .dayItem .listItem:nth-child(3) .changes p {
+  margin-right: 20px;
+}
+.theme .stadistics .listDays .dayItem .listItem:nth-child(3) .changes span {
+  opacity: 0.7;
+}
+
+@keyframes rotateIcon {
+  0% {
+    transform: translate(0, -50%) rotate(0) scale(0.8);
+  }
+  100% {
+    transform: translate(0, -50%) rotate(360deg) scale(1.2);
+  }
+}
+@keyframes showIcon {
+  0% {
+    opacity: 0;
+    margin-right: -100px;
+    margin-top: -100px;
+  }
+  100% {
+    opacity: 1;
+    margin-right: 0px;
+    margin-top: 0px;
+  }
+}
+.top-bar {
+  padding: 30px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.top-bar p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.top-bar span {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.btn-menu {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.position-relative {
+  position: relative !important;
+}
+
+.position-absolute {
+  position: absolute !important;
+}
+
+/*# sourceMappingURL=app.css.map */
