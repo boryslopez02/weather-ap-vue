@@ -54,7 +54,7 @@
   margin-top: 40px;
 }
 .theme .mainInfoContainer .dayInfo .temperature h1 {
-  font-size: 100px;
+  font-size: 80px;
   font-family: "Montserrat Alternates", sans-serif;
   font-weight: 700;
 }
@@ -91,7 +91,7 @@
 }
 .theme .mainInfoContainer .animationDay {
   top: 50%;
-  right: -150px;
+  right: -200px;
   transform: translate(0, -50%) scale(0.8);
   animation: rotateIcon 5s 1s cubic-bezier(1, 1, 1, 1) alternate infinite;
 }
@@ -172,12 +172,22 @@
   opacity: 0.7;
 }
 
+@media (min-width: 330px) {
+  .temperature h1 {
+    font-size: 100px !important;
+  }
+}
+@media (min-width: 350px) {
+  .animationDay {
+    right: -170px !important;
+  }
+}
 @keyframes rotateIcon {
   0% {
     transform: translate(0, -50%) rotate(0) scale(0.8);
   }
   100% {
-    transform: translate(0, -50%) rotate(360deg) scale(1.2);
+    transform: translate(0, -50%) rotate(360deg) scale(1.1);
   }
 }
 @keyframes showIcon {
